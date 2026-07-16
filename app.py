@@ -26,7 +26,7 @@ if file_data:
 
   grade_optin = st.selectbox("확인할 등급을 선택하세요.", df['credit_score'].unique())
 
-  selected_df = df[df['credit_score'] == grade_optin
+  selected_df = df[df['credit_score'] == grade_optin]
   st.write(f"{grade_optin}등급 고객 데이터 : ")
   st.dataframe(selected_df)
   
