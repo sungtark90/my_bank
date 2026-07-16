@@ -22,16 +22,22 @@ if file_data:
   st.subheader("신용등급이 1등급인 고객 리스트")
   st.dataframe(df_a_grade)
 
+  grade_optin = st.selectbox("확인할 등급을 선택하세요.", df['credit_score'].unique())
+
+  selected_df = df[df['credit_score'] == grade_optin
+  st.write(f"{grade_optin}등급 고객 데이터 : ")
+  st.dataframe(selected_df)
+  
   # DB 연결 종료
   conn.close()
   
 else:
   st.error("파일 경로를 확인해 주세요.")
 
-''' 멀티라인 주석처리
+""" 멀티라인 주석처리
 st.write("안녕하세요")
 print("안녕하세요")
 
 for text in range(2):
   st.write("반갑습니다")
-'''
+"""
