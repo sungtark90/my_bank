@@ -13,11 +13,12 @@ if file_data:
   # DB연결
   conn = sqlite3.connect(db_path)
   # query 작성
-  #query = "select * from virtual_loan where credit_score = '1등급'"
-  query = "select borrower_name, loan_type, credit_score from virtual_loan" 
+  query = "select * from virtual_loan where credit_score = '1등급'"
+  query2 = "select borrower_name, loan_type, credit_score from virtual_loan" 
+  
   # 쿼리문을 이용해서 데이터 불러오기
-  #df_a_grade = pd.read_sql(query, conn)
-  df = pd.read_sql(query, conn)
+  df_a_grade = pd.read_sql(query, conn)
+  df = pd.read_sql(query2, conn)
 
   # Frontend 데이터 웹페이지에 출력
   st.subheader("신용등급이 1등급인 고객 리스트")
