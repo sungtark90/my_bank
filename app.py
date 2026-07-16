@@ -15,7 +15,7 @@ if file_data:
   # query 작성
   query = "select * from virtual_loan_data where credit_score = '1등급'"
   # 쿼리문을 이용해서 데이터 불러오기
-  df_a_grade = pd.read.sql(query, conn)
+  df_a_grade = pd.read_sql(query, conn)
 
   # Frontend 데이터 웹페이지에 출력
   st.subheader("신용등급이 1등급인 고객 리스트")
