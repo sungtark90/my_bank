@@ -4,7 +4,7 @@ import pandas as pd
 import os
 
 # DB연결(파일경로)
-db_path = "my_bank"
+db_path = "my_bank.db"
 
 # DB파일에서 데이터 추출
 file_data = os.path.exists(db_path)
